@@ -9,7 +9,7 @@
 
   <body>
     <section class="question q1">
-      <h2>Question1 Title</h2>
+      <h2>Question1 Title<span class="error"></span></h2>
       <p>Four possible text answers radio button.</p>
       <div class="questionbox">
         <input type="radio" id="q1answer1" name="question1radio" value="q1answer1">
@@ -24,7 +24,7 @@
     </section>
 
     <section class="question q2">
-      <h2>Question2 Title</h2>
+      <h2>Question2 Title<span class="error"></span></h2>
       <p>Four possible answers with images.</p>
       <div class="questionbox">
 
@@ -48,7 +48,7 @@
     </section>
 
     <section class="question q3">
-      <h2>Question3 Title</h2>
+      <h2>Question3 Title<span class="error"></span></h2>
       <label for="shortanswer">Short text answer.</label></br>
       <input type="text" id="shortanswer" name="shortanswer" placeholder="enter your answer...">
     </section>
@@ -62,6 +62,7 @@
       <p>Q1 answer: <span id="outputq1answer"></span></p>
       <p>Q2 answer: <span id="outputq2answer"></span></p>
       <p>Q3 answer: <span id="outputq3answer"></span></p>
+      <button type="button" id="reset" onClick="window.location.reload(); window.scrollTo(0, 0);">Reset Quiz</button>
     </section>
 
   </body>
