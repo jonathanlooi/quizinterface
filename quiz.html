@@ -1,87 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Travel Emissions</title>
-<link rel="stylesheet" type="text/css" href="./travelemissions.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="./travelemissions.js"></script>
-<script src="./search.js"></script>
+  <meta charset="utf-8">
+  <title>Quiz</title>
+  <link rel="stylesheet" type="text/css" href="./quiz.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./quiz.js"></script>
 
-
-<body>
-
-<div class="select-method">
-  <h1>Method of Transportation:</h1>
-  </br>
-  <input type="radio" id="plane" name="transportmethod" value="plane">
-  <label for="plane">Plane</label><br>
-  <input type="radio" id="train" name="transportmethod" value="train">
-  <label for="train">Train</label><br>
-  <input type="radio" id="car" name="transportmethod" value="car">
-  <label for="car">Car</label><br>
-  <input type="radio" id="ship" name="transportmethod" value="ship">
-  <label for="ship">Ship</label><br>
-</div>
-
-<div class="plane box">
-
-  <h1>Enter your flight details</h1>
-  <div class="plane-calculate">
-    <div class="to-from">
-      <div class="from-right">
-        <label for="plane-to">Flying From</label></br>
-        <input type="text" id="from" name="from" placeholder="enter airport or metropolitan area...">
+  <body>
+    <section class="question q1">
+      <h2>Question1 Title</h2>
+      <p>Four possible text answers radio button.</p>
+      <div class="questionbox">
+        <input type="radio" id="q1answer1" name="question1radio" value="q1answer1">
+        <label for="q1answer1">answer1</label>
+        <input type="radio" id="q1answer2" name="question1radio" value="q1answer2">
+        <label for="q1answer2">answer2</label>
+        <input type="radio" id="q1answer3" name="question1radio" value="q1answer3">
+        <label for="q1answer3">answer3</label>
+        <input type="radio" id="q1answer4" name="question1radio" value="q1answer4">
+        <label for="q1answer4">answer4</label>
       </div>
-      <div class="to-left">
-        <label for="plane-from">To</label></br>
-        <input type="text" id="to" name="to" placeholder="enter airport or metropolitan area...">
+    </section>
+
+    <section class="question q2">
+      <h2>Question2 Title</h2>
+      <p>Four possible answers with images.</p>
+      <div class="questionbox">
+
+        <label for="q2answer1">
+          <input type="radio" id="q2answer1" name="question2radio" value="q2answer1">
+          <img src="http://icons.iconarchive.com/icons/martin-berube/square-animal/128/Bee-icon.png" alt="bee" width="100px">
+        </label>
+        <label for="q2answer2">
+          <input type="radio" id="q2answer2" name="question2radio" value="q2answer2">
+          <img src="http://icons.iconarchive.com/icons/martin-berube/square-animal/128/Cow-icon.png" alt="cow" width="100px">
+        </label>
+        <label for="q2answer3">
+          <input type="radio" id="q2answer3" name="question2radio" value="q2answer3">
+          <img src="http://icons.iconarchive.com/icons/martin-berube/square-animal/128/Lobster-icon.png" alt="lobster" width="100px">
+        </label>
+        <label for="q2answer4">
+          <input type="radio" id="q2answer4" name="question2radio" value="q2answer4">
+          <img src="http://icons.iconarchive.com/icons/martin-berube/square-animal/128/Penguin-icon.png" alt="penguin" width="100px">
+        </label>
       </div>
-    </div>
+    </section>
 
+    <section class="question q3">
+      <h2>Question3 Title</h2>
+      <label for="shortanswer">Short text answer.</label></br>
+      <input type="text" id="shortanswer" name="shortanswer" placeholder="enter your answer...">
+    </section>
 
-    <p>
-      <label for="miles">Number of miles</label>
-      <input type="number" id="miles" name="miles" placeholder="enter miles...">
-    </p>
+    <section class="submit-quiz">
+        <button data-action="submit-quiz">Submit</button>
+    </section>
 
-    <p>One Way or Round Trip</p>
-    <input type="radio" id="oneway" name="ways" value="oneway">
-    <label for="oneway">One Way</label><br>
-    <input type="radio" id="roundtrip" name="ways" value="roundtrip">
-    <label for="roundtrip">Round Trip</label><br>
+    <section class="results">
+      <h1>The results of your quiz go here.</h1>
+      <p>Q1 answer: <span id="outputq1answer"></span></p>
+      <p>Q2 answer: <span id="outputq2answer"></span></p>
+      <p>Q3 answer: <span id="outputq3answer"></span></p>
+    </section>
 
-    <p>business? Econ? first?</p>
-    <input type="radio" id="economy" name="planeclass" value="economy">
-    <label for="economy">Economy</label><br>
-    <input type="radio" id="business" name="planeclass" value="business">
-    <label for="business">Business</label><br>
-    <input type="radio" id="first" name="planeclass" value="first">
-    <label for="first">First</label><br>
-
-  </div>
-</div>
-
-<div class="train box">
-  <h1>Train calculations in development</h1>
-</div>
-
-<div class="car box">
-  <h1>Car calculations in development</h1>
-</div>
-
-<div class="ship box">
-  <h1>Ship calculations in development</h1>
-</div>
-
-<div class="calculate-button">
-  <button data-action="calculate">Calculate my emissions!</button>
-</div>
-
-<div class="results">
-  <h1>You are emitting <span id="outputemissions"></span> kg of CO2</h1>
-  <h1>You will travel <span id="outputmiles"></span> miles</h1>
-</div>
-
-</body>
-</html>
+  </body>
+  </html>
